@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.1 on win32)" generated="20220426 16:10:08.523" rpa="false" schemaversion="2">
+<suite id="s1" name="Transferencia" source="C:\Letsbank\Android\tests\transferencia.robot">
+<test id="s1-t1" name="Deve Efetuar Uma Transferência Com Sucesso">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220426 16:10:08.889" endtime="20220426 16:10:08.890"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/App_v_3.9.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220426 16:10:08.890" endtime="20220426 16:10:24.492"/>
+</kw>
+<status status="PASS" starttime="20220426 16:10:08.889" endtime="20220426 16:10:24.492"/>
+</kw>
+<kw name="Go to Login" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:10:24.493" endtime="20220426 16:10:29.078"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:29.080" level="INFO">Clicking element 'id=br.com.smartbank:id/login'.</msg>
+<status status="PASS" starttime="20220426 16:10:29.078" endtime="20220426 16:10:29.159"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Qual o seu CPF?</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220426 16:10:29.159" endtime="20220426 16:10:30.867"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/textField</arg>
+<arg>${USER}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:30.871" level="INFO">Typing text '09808306993' into text field 'id=br.com.smartbank:id/textField'</msg>
+<status status="PASS" starttime="20220426 16:10:30.868" endtime="20220426 16:10:30.973"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>Próximo</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220426 16:10:30.973" endtime="20220426 16:10:31.678"/>
+</kw>
+<kw name="Insert Password" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/keyboard</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:10:31.679" endtime="20220426 16:10:32.893"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn2</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:32.895" level="INFO">Clicking element 'id=br.com.smartbank:id/btn2'.</msg>
+<status status="PASS" starttime="20220426 16:10:32.893" endtime="20220426 16:10:32.958"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn9</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:32.960" level="INFO">Clicking element 'id=br.com.smartbank:id/btn9'.</msg>
+<status status="PASS" starttime="20220426 16:10:32.958" endtime="20220426 16:10:33.503"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn0</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:33.505" level="INFO">Clicking element 'id=br.com.smartbank:id/btn0'.</msg>
+<status status="PASS" starttime="20220426 16:10:33.503" endtime="20220426 16:10:34.033"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn3</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:34.035" level="INFO">Clicking element 'id=br.com.smartbank:id/btn3'.</msg>
+<status status="PASS" starttime="20220426 16:10:34.033" endtime="20220426 16:10:34.546"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn5</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:34.547" level="INFO">Clicking element 'id=br.com.smartbank:id/btn5'.</msg>
+<status status="PASS" starttime="20220426 16:10:34.546" endtime="20220426 16:10:35.080"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn8</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:35.082" level="INFO">Clicking element 'id=br.com.smartbank:id/btn8'.</msg>
+<status status="PASS" starttime="20220426 16:10:35.080" endtime="20220426 16:10:35.610"/>
+</kw>
+<status status="PASS" starttime="20220426 16:10:31.678" endtime="20220426 16:10:35.610"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220426 16:10:40.622" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220426 16:10:35.610" endtime="20220426 16:10:40.622"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/welcomeMessage</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:10:40.623" endtime="20220426 16:10:40.702"/>
+</kw>
+<status status="PASS" starttime="20220426 16:10:24.492" endtime="20220426 16:10:40.702"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>Transferir</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220426 16:10:40.703" endtime="20220426 16:10:40.848"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220426 16:10:45.861" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220426 16:10:40.849" endtime="20220426 16:10:45.861"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/search</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:45.863" level="INFO">Clicking element 'id=br.com.smartbank:id/search'.</msg>
+<status status="PASS" starttime="20220426 16:10:45.862" endtime="20220426 16:10:45.916"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/textField</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:10:45.917" endtime="20220426 16:10:47.187"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/textField</arg>
+<arg>${NOME_BENEFICIARIO}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:47.189" level="INFO">Typing text 'Isadora' into text field 'id=br.com.smartbank:id/textField'</msg>
+<status status="PASS" starttime="20220426 16:10:47.188" endtime="20220426 16:10:47.238"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/initials</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:10:47.239" endtime="20220426 16:10:48.281"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/initials</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:48.283" level="INFO">Clicking element 'id=br.com.smartbank:id/initials'.</msg>
+<status status="PASS" starttime="20220426 16:10:48.282" endtime="20220426 16:10:48.318"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/bankAccountInfos</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:10:48.318" endtime="20220426 16:10:49.195"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/photo</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:49.197" level="INFO">Clicking element 'id=br.com.smartbank:id/photo'.</msg>
+<status status="PASS" starttime="20220426 16:10:49.196" endtime="20220426 16:10:49.247"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Quanto quer transferir</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220426 16:10:49.248" endtime="20220426 16:10:50.817"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/textField</arg>
+<arg>123</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:50.821" level="INFO">Typing text '123' into text field 'id=br.com.smartbank:id/textField'</msg>
+<status status="PASS" starttime="20220426 16:10:50.818" endtime="20220426 16:10:51.452"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/next</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:51.455" level="INFO">Clicking element 'id=br.com.smartbank:id/next'.</msg>
+<status status="PASS" starttime="20220426 16:10:51.453" endtime="20220426 16:10:52.259"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/touchArea</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:10:52.259" endtime="20220426 16:10:53.195"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>778</arg>
+<arg>1640</arg>
+<arg>827</arg>
+<arg>255</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20220426 16:10:53.196" endtime="20220426 16:10:54.480"/>
+</kw>
+<kw name="Insert Authentication Password" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/keyboard</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:10:54.481" endtime="20220426 16:10:55.289"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn2</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:55.292" level="INFO">Clicking element 'id=br.com.smartbank:id/btn2'.</msg>
+<status status="PASS" starttime="20220426 16:10:55.290" endtime="20220426 16:10:55.341"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn9</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:55.343" level="INFO">Clicking element 'id=br.com.smartbank:id/btn9'.</msg>
+<status status="PASS" starttime="20220426 16:10:55.341" endtime="20220426 16:10:55.860"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn0</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:55.863" level="INFO">Clicking element 'id=br.com.smartbank:id/btn0'.</msg>
+<status status="PASS" starttime="20220426 16:10:55.861" endtime="20220426 16:10:56.393"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/btn3</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:10:56.395" level="INFO">Clicking element 'id=br.com.smartbank:id/btn3'.</msg>
+<status status="PASS" starttime="20220426 16:10:56.393" endtime="20220426 16:10:56.925"/>
+</kw>
+<status status="PASS" starttime="20220426 16:10:54.480" endtime="20220426 16:10:56.925"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220426 16:11:06.933" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220426 16:10:56.926" endtime="20220426 16:11:06.933"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/showVoucher</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:11:06.934" endtime="20220426 16:11:06.959"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/showVoucher</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:11:06.961" level="INFO">Clicking element 'id=br.com.smartbank:id/showVoucher'.</msg>
+<status status="PASS" starttime="20220426 16:11:06.960" endtime="20220426 16:11:06.993"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/voucherTitle</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220426 16:11:06.994" endtime="20220426 16:11:08.599"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>639</arg>
+<arg>1664</arg>
+<arg>685</arg>
+<arg>456</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20220426 16:11:08.600" endtime="20220426 16:11:09.909"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>793</arg>
+<arg>1579</arg>
+<arg>772</arg>
+<arg>357</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20220426 16:11:09.909" endtime="20220426 16:11:11.252"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=br.com.smartbank:id/close_voucher</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 16:11:11.253" level="INFO">Clicking element 'id=br.com.smartbank:id/close_voucher'.</msg>
+<status status="PASS" starttime="20220426 16:11:11.252" endtime="20220426 16:11:11.293"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220426 16:11:11.295" endtime="20220426 16:11:12.542"/>
+</kw>
+<status status="PASS" starttime="20220426 16:11:11.294" endtime="20220426 16:11:12.542"/>
+</kw>
+<status status="PASS" starttime="20220426 16:10:08.889" endtime="20220426 16:11:12.543"/>
+</test>
+<status status="PASS" starttime="20220426 16:10:08.525" endtime="20220426 16:11:12.545"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Transferencia">Transferencia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
